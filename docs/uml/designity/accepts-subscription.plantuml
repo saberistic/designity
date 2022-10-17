@@ -1,0 +1,25 @@
+@startuml
+title "Designity accepts a subscription"
+|designity|
+start
+:Logs in;
+:Gets list of pending subscriptions;
+repeat
+:Selects next pending subscription;
+:Review details;
+:Submit approval;
+note left
+    {
+        "creative_director": "publicKey",
+    }
+end note
+|contract|
+:Asserts creative director;
+:Sets creative director;
+:Sets subscription status to active;
+:Updates subscription;
+repeatwhile(pending subscription left)
+|client|
+:Recieves email;
+stop
+@enduml

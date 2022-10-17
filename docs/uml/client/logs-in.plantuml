@@ -1,0 +1,9 @@
+@startuml
+title "Client logs in flow"
+|client|
+start
+:Visits User Interface;
+:Enter email;
+:Sync/Recover wallet;
+stop
+@enduml

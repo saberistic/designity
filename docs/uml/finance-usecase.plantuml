@@ -1,0 +1,17 @@
+@startuml "Finance Usecases"
+title Financial Usecases
+"client" as cl
+cl -down-> (Logs in)
+cl -down-> (Starts a subscription)
+cl -down-> (Cancels a subscription)
+cl -down-> (Deposits funds)
+"designity" as dsnty
+dsnty -down-> (Deploys contract instance)
+dsnty -down-> (Accepts a subscription)
+dsnty -down-> (Returns funds)
+"creative director" as cd
+cd -down-> (Allocates funds to creatives)
+cd -down-> (Claims payments)
+cd -down-> (Approves creative payment)
+"creative" as cr
+cr -down-> (Claims payments)

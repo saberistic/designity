@@ -1,0 +1,28 @@
+@startuml "Designity"
+title Actors and Usecases
+"Client" as cl
+"Creative Director" as cd
+"Creative" as cr
+"Designity" as ds
+cl -down-> (Starts projects)
+cl -down-> (Approves projects overview)
+cl -down-> (Deposits funds)
+cl -down-> (Approves projects assets)
+cl -down-> (Starts disputes)
+cl -down-> (Cancels project)
+cd -down-> (Requests funds)
+cd -down-> (Reviews project)
+cd -down-> (Updates project details)
+cd -down-> (Defines project assets)
+cd -down-> (Manages Creatives in projects)
+cd -down-> (Allocate funds to Creative)
+cd -down-> (Reviews Creative submitted assets)
+cd -down-> (Approves Creative payment)
+cd -down-> (Claims payments)
+cr -down-> (Updates assets status)
+cr -down-> (Claims payments)
+ds -down-> (Deploys smart contract)
+ds -down-> (Assigns Creative Director to projects)
+ds -down-> (Resolves disputes)
+ds -down-> (Returns funds)
+@enduml

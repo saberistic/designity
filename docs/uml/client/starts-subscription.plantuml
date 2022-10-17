@@ -1,0 +1,32 @@
+@startuml
+title "Client starts a subscription"
+|client|
+start
+:Logs in;
+:Selects new subscription;
+:Provide details;
+note left
+    {
+        "plan": "essentials|plus|premium",
+        "total_fee": "10000",
+        "token": "USDC",
+        "email": "example@designity.comm",
+        "name": "Design Ity"
+        "start_timestamp": "2023-01-01"
+    }
+end note
+|contract|
+:Asserts token type;
+:Compares plan and total_fee;
+if (funds?) is (enough) then
+:Sets subscription status to pending;
+:Stores subscription;
+|Designity|
+:Recieves email;
+stop
+|contract|
+else (not enough)
+:Rejects subscription;
+stop
+endif
+@enduml

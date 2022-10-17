@@ -1,0 +1,18 @@
+@startuml
+title "Designity deploys contract"
+|designity|
+start
+:Logs in;
+:Provide predefined constants;
+note left
+    {
+        "plan_details": [{
+            "plan": "",
+            "fee": ""
+        }],
+        "admin": "publicKey"
+    }
+end note
+:Submit contract to network;
+stop
+@enduml

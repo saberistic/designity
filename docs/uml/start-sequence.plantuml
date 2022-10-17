@@ -1,0 +1,40 @@
+@startuml "Start Project"
+title "Start a project flow"
+|Designity|
+start
+:Deploys smart contract;
+|Client|
+:Starts project;
+note left
+    {
+        "name": "...",
+        "plan": "...",
+        "startDate": "..."
+    }
+end note
+|Designity|
+:Assigns Creative Director;
+|Creative Director|
+:Reviews project details;
+:Defines project assets;
+|Client|
+:Approves project assets;
+:Approves project overview;
+|Creative Director|
+:Request funds;
+|Client|
+:Deposit funds;
+|Creative Director|
+:Manages Creatives in project;
+:Allocate funds to Creatives;
+|Creative|
+:Updates asset status;
+|Creative Director|
+:Reviews Creative submitted assets;
+|Creative|
+:Claims payment;
+|Creative Director|
+:Approves Creative payment;
+:Claims payment;
+end
+@enduml

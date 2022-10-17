@@ -1,0 +1,37 @@
+@startuml "Objects"
+title Smart Contract Objects
+
+object Deployment
+Deployment : admin = "pubkey"
+Deployment : address = "pubKey"
+Deployment : version = "1"
+
+object Contract
+Contract : client = "pubKey"
+Contract : director = "pubKey"
+Contract : state = "pending|trial|active|canceled|completed"
+Contract : funds = "10USDC"
+Contract : start_date = "2023-01-01"
+Contract : name = "Foo"
+
+map Assets {
+  type => "banner|logo|catalouge|..."
+  delivery => "digital|physical"
+  status => "pending|active|completed"
+  fund => "1USDC"
+  start_date => "2023-01-10"
+  end_date => "2023-01-20"
+  creatives =>
+}
+
+map Creatives {
+  level => "emerging|senior"
+  address => "pubKey"
+}
+
+Assets --> Contract: includes
+
+Contract -> Deployment : belongs to
+
+Assets::creatives --> Creatives :  works on
+@enduml
