@@ -1,0 +1,21 @@
+@startuml
+title "Creative Director removes creatives"
+|creative director|
+start
+:Logs in;
+:Gets list of assigned subscriptions;
+:Selects subscriptions to edit;
+:Remove creative;
+note left
+    {
+        "creative": "publicKey",
+    }
+end note
+|contract|
+:Asserts creatives status;
+:Move remaining funds back to subscription;
+:Sets creative to done;
+|creative|
+:Recieves email;
+stop
+@enduml

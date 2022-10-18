@@ -1,0 +1,22 @@
+@startuml
+title "Creative claims payment"
+|creative|
+start
+:Logs in;
+:Gets list of assigned subscriptions;
+:Selects subscriptions;
+:Selects available payment;
+:Claims payment;
+note left
+    {
+        "creative": "publicKey",
+        "subscription": "publicKey"
+    }
+end note
+|contract|
+:Asserts creatives eligibility;
+:Move funds to creative;
+|creative director|
+:Recieves email;
+stop
+@enduml

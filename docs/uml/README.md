@@ -1,0 +1,1 @@
+![Finance usecases](https://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/saberistic/designity/main/docs/uml/finance-usecase.plantuml)

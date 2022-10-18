@@ -1,0 +1,24 @@
+@startuml
+title "Creative Director approves creative payment"
+|creative director|
+start
+:Logs in;
+:Gets list of assigned subscriptions;
+:Selects subscriptions to edit;
+:Selects assigned creative;
+:Approves payment;
+note left
+    {
+        "creative": "publicKey",
+        "amount": "20",
+        "token": "USDC",
+    }
+end note
+|contract|
+:Asserts creatives eligibility;
+:Approve funds for creative;
+:Increases paid balance;
+|creative|
+:Recieves email;
+stop
+@enduml

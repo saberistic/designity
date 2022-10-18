@@ -1,0 +1,26 @@
+@startuml
+title "Creative Director adds creatives"
+|creative director|
+start
+:Logs in;
+:Gets list of assigned subscriptions;
+:Selects subscriptions to edit;
+repeat
+:Adds creative;
+note left
+    {
+        "creative": "publicKey",
+        "start_date": "date",
+        "end_date": "date",
+        "level": "pro"
+    }
+end note
+|contract|
+:Asserts available funds;
+:Move funds to escrow;
+:Sets creative to active;
+repeatwhile(pending funds left)
+|creative|
+:Recieves email;
+stop
+@enduml

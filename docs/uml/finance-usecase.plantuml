@@ -10,7 +10,7 @@ dsnty -down-> (Deploys contract instance)
 dsnty -down-> (Accepts a subscription)
 dsnty -down-> (Returns funds)
 "creative director" as cd
-cd -down-> (Allocates funds to creatives)
+cd -down-> (Adds creatives)
 cd -down-> (Claims payments)
 cd -down-> (Approves creative payment)
 "creative" as cr
